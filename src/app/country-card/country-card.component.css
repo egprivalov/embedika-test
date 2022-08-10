@@ -1,0 +1,78 @@
+.container{
+  width: 70%;
+  min-height: 106px;
+  margin: 0 0 40px 64px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-bottom: #A5A5A5 solid 1px;
+}
+
+.countryName{
+  height: 24px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 0;
+  transition-duration: .3s;
+}
+
+.countryName:hover{
+  font-size: 22px;
+  cursor: pointer;
+}
+.countryName:hover > .arrow{
+  width: 18px;
+  height: 18px;
+}
+.arrow{
+  color: #2962FF;
+  height: 16px;
+  width: 16px;
+  margin-left: 19px;
+  transition-duration: .5s;
+}
+
+.tags{
+  display: flex;
+  margin-top: 29px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.tags--continents{
+  display: flex;
+  width: 523px;
+}
+.tags--languages{
+  position: relative;
+  display: flex;
+  max-width: 45%;
+}
+.tags--name{
+  margin: 0 104px 0 0;
+}
+.tags--filter{
+  color: #2962FF;
+  margin: 0 1rem 0 0;
+}
+
+.active{
+  transition-duration: .3s;
+}
+.active:hover{
+  font-size: 17px;
+  cursor: pointer;
+}
+@media (max-width: 1800px) {
+  .tags{
+    flex-direction: column;
+  }
+  .tags--languages > .tags--name{
+    margin-right: 135px;
+  }
+}

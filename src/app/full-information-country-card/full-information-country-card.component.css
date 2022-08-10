@@ -1,0 +1,112 @@
+p{
+  margin: 0;
+}
+.informationContainer{
+  transition-duration: 1s;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 93%;
+  height: calc(100% - 1px);
+  background-color: #FAFAFA;
+  padding: 48px 66px;
+  border: 1px solid rgba(0,0,0, 0.3);
+  border-top: none;
+  border-left: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.return{
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #2962FF;
+  height: 16px;
+  margin-bottom: 22px;
+  transition-duration: .3s;
+}
+.return:hover {
+  font-size: 16px;
+  cursor: pointer;
+}
+.return:hover > .informationArrow{
+  width: 12px;
+  height: 12px;
+}
+.informationArrow{
+  transition-duration: .3s;
+  margin-right: 8px;
+  margin-bottom: 2px;
+}
+
+.informationCountryName{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  margin: 0 0 53px 0;
+}
+
+.Line{
+  display: flex;
+  height: 25px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.informationCapital{
+  display: flex;
+  width: 425px;
+}
+.informationCapital > p{
+  width: 122px;
+}
+.informationCurrency{
+  display: flex;
+}
+.informationCurrency > p{
+  width: 131px;
+}
+.informationContinent{
+  display: flex;
+  width: 425px;
+}
+.informationContinent > p{
+  width: 122px;
+}
+.informationPhone{
+  display: flex;
+}
+.informationPhone > p{
+  width: 131px;
+}
+
+.informationLanguages{
+  display: flex;
+  margin-top: 22px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+.informationLanguages > p{
+  margin-right: 9px;
+}
+
+.informationActive{
+  transition-duration: .3s;
+  color: #2962FF;
+}
+.informationActive:hover{
+  font-size: 17px;
+  cursor: default;
+}
+
+.slideIn{
+  right: 0;
+}

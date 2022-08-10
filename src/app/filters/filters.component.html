@@ -1,0 +1,31 @@
+<div class="filters">
+  <div class="filters--head">
+    <p>Фильтры</p>
+  </div>
+
+  <div class="nameFilter">
+    <input class="nameFilterInput" type="text" id="name" name="name" placeholder=" " autocomplete="off" [formControl]="nameFilter">
+    <label class="nameFilterLabel" for="name">Название</label>
+  </div>
+
+  <form class="filtersByContinent">
+    <p>Континент</p>
+    <div class="continent" *ngFor="let continent of continents; let i = index">
+      <input type="radio" [id]="continent.name" [value]="continent.name" [checked]="continent.checked"
+             [formControl]="continent.control" (click)="setContinentChecked(i)">
+      <label [for]="continent.name">{{ continent.name }}</label>
+    </div>
+  </form>
+
+  <form class="filtersByLanguage">
+    <input class="nameFilterInput" type="text" id="language" name="language" placeholder="" value="Выбрано: {{ selectedLanguagesNames.length }}" disabled>
+    <label class="nameFilterLabel" for="language">Языки</label>
+    <div class="languages">
+      <div class="language" *ngFor="let Language of allLanguages; let i = index">
+        <input type="checkbox" id="language-{{ i }}" [checked]="Language.checked" (click)="setLanguageChecked(i)">
+        <label for="language-{{ i }}">{{ Language.name }}</label>
+      </div>
+    </div>
+  </form>
+
+</div>

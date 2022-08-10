@@ -1,0 +1,33 @@
+<div class="informationContainer" [ngClass]="{slideIn: pageSelected}" >
+  <div class="return" (click)="getBack()">
+    <svg class="informationArrow" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66667 4.41665L2.5675 4.41665L5.82834 1.15581L5 0.333313L0.333336 4.99998L5 9.66665L5.8225 8.84415L2.5675 5.58331L9.66667 5.58331V4.41665Z" fill="#2962FF"/>
+    </svg>
+    <p>Вернуться</p>
+  </div>
+  <p class="informationCountryName">{{ country.name }}</p>
+  <div class="Line">
+    <div class="informationContinent">
+      <p>Континент</p>
+      <p class="informationActive">{{ country.continentName }}</p>
+    </div>
+    <div class="informationPhone">
+      <p>Код</p>
+      <p class="informationActive">+{{ country.phone }}</p>
+    </div>
+  </div>
+  <div class="Line">
+    <div class="informationCapital">
+      <p>Столица</p>
+      <p class="informationActive">{{ country.capitalName }}</p>
+    </div>
+    <div class="informationCurrency">
+      <p>Валюта</p>
+      <p class="informationActive">{{ country.currency }}</p>
+    </div>
+  </div>
+  <p>Языки</p>
+  <div class="informationLanguages">
+    <p class="informationActive" *ngFor="let language of country.languages">{{ language }}</p>
+  </div>
+</div>

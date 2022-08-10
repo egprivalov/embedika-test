@@ -1,0 +1,21 @@
+<div class="head">
+  <p>Countries</p>
+</div>
+<div class="countriesList">
+  <app-country-card *ngFor="let card of cards" [card]="card"></app-country-card>
+</div>
+<div class="pageSelector">
+  <svg class="arrow" width="12" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+       (click)="decrementPages()" [ngClass]="{'active': page !== 0,
+                                             'disabled': page === 0}">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.41 1.41L6 0L0 6L6 12L7.41 10.59L2.83 6L7.41 1.41Z" fill="currentColor"/>
+  </svg>
+  <p>{{ page + 1 }}</p>
+  <svg class="arrow" width="12" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+       (click)="incrementPages()" [ngClass]="{'active': page < maxPages-1,
+                                             'disabled': page >= maxPages-1}">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.59 10.59L2 12L8 6L2 0L0.59 1.41L5.17 6L0.59 10.59Z" fill="currentColor"/>
+  </svg>
+</div>
+<app-filters></app-filters>
+<app-full-information-country-card></app-full-information-country-card>
